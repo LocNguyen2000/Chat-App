@@ -1,0 +1,216 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.register-container{
+    height: 100vh;
+    width: 100%;
+    background: url("../img/register-background.jpg") no-repeat center center;
+    background-size: cover; 
+    display: flex;
+    justify-content:flex-end;
+}
+
+.log-in-container{
+    height: 100vh;
+    width: 100%;
+    background: url("../img/login-background.jpg") no-repeat center center;
+    background-size: cover; 
+    display: flex;
+    justify-content:flex-end;
+}
+
+input{
+    width: 100%;
+    font-size: 13px;
+    padding: 7px 5px;
+    border-radius: 5px;
+    border: 1px solid #e9e8e9;
+}
+
+input:focus{
+    outline: none;
+}
+button{
+    min-width: 120px;
+    padding : 7px;
+    font-size: 13px;
+    border-radius: 5px;
+    color: white;
+    background: #0b75ffd5;
+}
+
+button:disabled{
+    background: silver;
+}
+
+button:hover{
+    cursor:pointer;
+}
+a {
+    color: #000000;
+    text-decoration: none;
+}
+#form-register> .input-wrapper:hover{
+    background: none;
+}
+
+.form-container{
+    height: 100%;
+    width: 500;
+    background: rgba(255,255,255);
+    padding: 70px 50px;
+}
+
+.form-container .form-header{
+    text-align: center;
+    font-size: 30;
+    color: #788195;
+    margin-bottom: 50px;
+}
+
+.form-container .name-wrapper{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.form-container #form-register > * {
+    margin-bottom: 15px;
+}
+
+.form-container #form-log-in > * {
+    margin-bottom: 15px;
+}
+
+.form-container .name-wrapper .input-wrapper{
+    width: 48%;
+}
+
+#form-register .form-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+#form-log-in .form-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.message-error{
+    font-size: 13px;
+    color: red;
+    padding-top :5px
+}
+
+.message-success{
+    font-size: 13px;
+    color: green;
+    padding-top: 5px;
+}
+
+.loading-container{
+    width:100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000000;
+}
+
+/* Chat screen */
+.chat-container{
+    display: flex;
+    height: calc(100vh - 40px);
+}
+.chat-container .list-conversations{
+    width: 15%;
+    height: 100%;
+}
+
+.chat-container .current-conversation{
+    width: 85%;
+    height: 100%;
+}
+
+/* list-conversation */
+.add-conversation-container{
+    padding:5px;
+}
+/* chi toi cac class con */
+.add-conversation-container>*{
+    margin-bottom: 10px;
+}
+.conversations .conversation{
+    box-shadow: 3px 3px #f2f2f2;
+    font-size: 13px;
+    padding: 15px;
+}
+
+.conversations .conversation:hover{
+    cursor: pointer;
+}
+.conversations .conversation.active{
+    box-shadow: #b2b2b2;
+    background: #e4e3e3;
+}
+
+.add-conversation-container button{
+    min-width: 100%;
+}
+
+/*nav bar */
+.main-nav-bar{
+    height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    background: #1f62b9d5;
+    color: #ffffff;
+    font-size: 15px;
+}
+
+/* chat message lon */
+.chat-messages{
+    padding: 10px;
+    width: 100%;
+    height: calc(100% - 40px);
+    overflow-y: scroll;
+    word-break: break-word;
+}
+/* chat message nho */
+.chat-message{
+    margin-bottom: 10px;
+}
+
+.chat-message span{
+    display: inline-block;
+    min-width: 150px;
+    max-width: 50%;
+    min-height: 40px;
+    padding: 10px; 
+    line-height: 20px;
+    font-size: 16px;
+    background:#0b75ffd5;
+    color: #ffffff;
+    border-radius: 5px;
+}
+/* dau "," nghia la hoac */
+/* class viet lien nhau nghia la V(&) */
+.chat-message.your{
+    text-align: right;
+}
+.chat-form{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-form .input-wrapper {
+    width: calc(100% - 120px);
+}
