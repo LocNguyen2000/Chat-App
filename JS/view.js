@@ -150,7 +150,6 @@ view.showComponents = function(name) {
             let formAddConversation = document.getElementById('add-conversation-form')
             formAddConversation.onsubmit = formAddSubmitHandler
 
-
             async function formAddSubmitHandler(e){
                 e.preventDefault()
                 let title = formAddConversation.title.value
@@ -218,31 +217,47 @@ view.setText = function(id , text) {
 }
 
 view.showConversation = function(conversation){
+    // let friendsMail = document.getElementById('friends-mail')
+    // friendsMail.innerHTML = getFriendsEmail()
+
+    // async function getFriendsEmail(){
+    //     var email
+    //     let id = model.activeConversationID
+    //     await firebase.firestore().collection('conversations').doc(id).onSnapShot(doc => {
+    //         console.log(doc.data());
+    //     }).catch(error=>{
+    //         console.log(error);
+    //     })
+    //     return 'Name'
+    // }
+
     let chatMessage = document.getElementById('chat-messages')
     if(chatMessage){
         chatMessage.innerHTML = ""
-        for(let message of conversation.messages){
-            let className = "chat-message"
-            if (message.owner == model.authUser.email){
-                className += " your"
+        if(conversation.messages != null){        
+            for(let message of conversation.messages){
+                let className = "chat-message"
+                if (message.owner == model.authUser.email){
+                    className += " your"
+                }
+                let html = `
+                    <div class = "${className}">
+                        <span> ${message.content} </span>
+                    </div>
+                `
+                // let str = "user"
+                // let mess = "hello ${str} "  ~ "hello user" 
+                chatMessage.innerHTML += html
             }
-            let html = `
-                <div class = "${className}">
-                    <span> ${message.content} </span>
-                </div>
-            `
-            // let str = "user"
-            // let mess = "hello ${str} "  ~ "hello user" 
-            chatMessage.innerHTML += html
+            // auto scroll xuong duoi 
+            chatMessage.scrollTop = chatMessage.scrollHeight - chatMessage.clientHeight;
         }
-        // auto scroll xuong duoi 
-        chatMessage.scrollTop = chatMessage.scrollHeight - chatMessage.clientHeight;
     }
 }
 
 view.showListConversation = function(conversations){
     let divConversations = document.getElementById('conversations')
-    console.log(conversations)
+    // console.log(conversations)
     divConversations.innerHTML = ""
 // add html
     for(let conversation of conversations){

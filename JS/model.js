@@ -1,7 +1,8 @@
 const model = {
     authUser: null,
     conversations: null,
-    activeConversation: null
+    activeConversation: null,
+    activeConversationID: null
 }
 
 model.authen = function(authUser){
@@ -12,6 +13,7 @@ model.signOut = function(){
     model.authUser = null
     model.conversations = null
     model.activeConversation = null
+    model.activeConversationID = null
 }
 
 model.saveConversation = function(conversations){
@@ -19,7 +21,7 @@ model.saveConversation = function(conversations){
     view.showListConversation(conversations)
 }
 
-model.saveActiveConversation = function(conversationsId){
+model.saveActiveConversation = async function(conversationsId){
 
     if(model.conversations instanceof Array){
         // remove active classs of previous div conversation
@@ -35,6 +37,9 @@ model.saveActiveConversation = function(conversationsId){
         // update model.activeConversation
         for (let conversation of model.conversations){
             if(conversation.id == conversationsId){
+                // console.log('Hello 2');
+                model.activeConversationID = conversationsId
+                // console.log(model.activeConversationID);
                 model.activeConversation = conversation
                 view.showConversation(conversation)
                 return

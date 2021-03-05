@@ -61,6 +61,8 @@ controller.initApp = function(){
     }
 }
 
+
+
 controller.loadConversation = function(email){
     firebase.firestore().collection('conversations')
     .where('users', 'array-contains', email)
@@ -114,3 +116,8 @@ controller.sendMessage = async function(messageContent){
     }
 }
 
+// controller.getFriendsMail = function(){
+//     var friendEmail = model.activeConversationID
+//     console.log(model.activeConversationID);
+//     return friendEmail
+// }

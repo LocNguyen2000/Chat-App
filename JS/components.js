@@ -111,28 +111,54 @@ components.chat = `
                     Add 
                 </button>
             </form>
-            <div id = "conversations" class = "conversations">
+            <div class = 'chat-list-container'>
+                <div class= 'header'>
+                    <h3> 
+                        <i class="fa fa-th-list" aria-hidden="true"></i>
+                        CHAT LIST 
+                    </h3>
+                </div>
+                <div id = "conversations" class = "conversations">
+                </div>
             </div>
+            <br>
+            
+            
         </div>
         <div class = "current-conversation">
-            <div id = "chat-messages" class ="chat-messages">    
-            </div>
+            <div id = "friends-mail"> </div>
             <form id = "chat-form" class = "chat-form">
                 <div class = "input-wrapper">
                     <input type = "text" name = "message" placeholder = "Enter your message">
                 </div>
-                <button > Submit </button>
+                <button >
+                    <i class="fa fa-caret-right" aria-hidden="true" ></i>
+                     Submit 
+                </button>
             </form>
+            <div id = "chat-messages" class ="chat-messages">    
+            </div>
+            
         </div>
+       
     </section>
 `
 
 components.navBar = 
 `
     <nav class = "main-nav-bar">
-        <div id = "user-profile-container" class = user-profile-container">
-            <i class="fa fa-user" aria-hidden="true"></i>
-            <span id = "user-email" class = user-email"> </span>
+        <div id = "nav-cards-container" class = "nav-cards-container">
+            <div id = 'community'>
+                <i class="fa fa-users" aria-hidden="true"></i>
+                Community 
+            </div>
+            
+        </div>
+        <div id = "user-profile-container" class = "nav-cards-container">
+            <span>
+                <i class="fa fa-user-circle" aria-hidden="true"></i>
+                <span id = "user-email" class = user-email"> </span>
+            </span>
             <button id = "sign-out-btn"> 
                 <i class="fa fa-sign-out" aria-hidden="true"></i>
                 Sign out    
