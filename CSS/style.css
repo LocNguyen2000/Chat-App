@@ -256,12 +256,13 @@ button:focus{
     background: #fbaa33;
 }
 .chat-form{
-    width: 100%;
+    width: 80%;
     height: 30px;
     display: flex;
     justify-content: space-between;
-    /* position: fixed;
-    bottom: 0; */
+    position: fixed;
+    bottom: 0;
+    left: 100%-120px;
     align-items: center;
 }
 
