@@ -1,19 +1,14 @@
 const components = {}
 
-/* <div class = "tool-bar">
-            <a href = "#" id = "name-display" class = "name-display">
-                
-            </a>
-            <div id = "sign-out" class = "sign-out">
-                <button> Sign out </button>
-            </div>
-        </div> */
 components.register = `
 <section class="register-container">
     <div class="form-container">
         <div class="form-header">
             <span>
-                <h1> MindX Login </h1>
+                <h2>
+                    <i class="fa fa-users" aria-hidden="true"></i>
+                    Register Form 
+                </h2>
             </span>
         </div>
         <form id="form-register">
@@ -63,12 +58,15 @@ components.login = `
     <div class="form-container">
         <div class="form-header">
             <span>
-                <h1> MindX Chat </h1>
+                <h1> 
+                    <i class="fa fa-comments" aria-hidden="true"></i>
+                    Chat Login 
+                </h1>
             </span>
         </div>
         <form id="form-log-in">
             <div class="input-wrapper">
-                <input type=" email" name="email" placeholder=" Email">
+                <input type="email" name="email" placeholder=" Email">
                 <div id = email-error class = "message-error">  </div>
             </div>
 
@@ -94,6 +92,12 @@ components.login = `
 components.chat = `
     <section class = "chat-container">
         <div class = "list-conversations">
+            <div class = "header">
+                <h3>                
+                    <i class="fa fa-comments" aria-hidden="true"></i>
+                     CHAT APPLICATION 
+                </h3>
+            </div>
             <form id = "add-conversation-form" class = "add-conversation-container">
                 <div class = "input-wrapper">
                     <input type = "text" name = "title" placeholder = "New conversation title" />
@@ -102,7 +106,10 @@ components.chat = `
                     <input type = "email" name = "friendEmail" placeholder = "Your friend email"  required/>
                 </div>
                 <div id = "add-conversation-error" class = "message-error"> </div>
-                <button id = "add-conversation-btn">+ Add </button>
+                <button id = "add-conversation-btn">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                    Add 
+                </button>
             </form>
             <div id = "conversations" class = "conversations">
             </div>
@@ -124,8 +131,12 @@ components.navBar =
 `
     <nav class = "main-nav-bar">
         <div id = "user-profile-container" class = user-profile-container">
+            <i class="fa fa-user" aria-hidden="true"></i>
             <span id = "user-email" class = user-email"> </span>
-            <button id = "sign-out-btn"> Sign out </button>
+            <button id = "sign-out-btn"> 
+                <i class="fa fa-sign-out" aria-hidden="true"></i>
+                Sign out    
+            </button>
         </div>
     </nav>
 `

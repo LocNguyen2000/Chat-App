@@ -13,7 +13,6 @@ view.showComponents = function(name) {
             let form = document.getElementById('form-register')
             form.onsubmit = formSubmitHandler
 
-
             function formSubmitHandler(e){
                 e.preventDefault()
                 //1. lay du lieu nguoi dung dien vao
