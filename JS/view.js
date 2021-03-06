@@ -137,7 +137,8 @@ view.showComponents = function(name) {
             let app = document.getElementById('app')
             app.innerHTML = components.navBar;
             app.innerHTML += components.chat;
-
+            app.innerHTML += components.footer;
+            
             let chatForm = document.getElementById('chat-form')
             chatForm.onsubmit = chatFormSubmitHandler
 
@@ -217,41 +218,50 @@ view.setText = function(id , text) {
 }
 
 view.showConversation = function(conversation){
-    // let friendsMail = document.getElementById('friends-mail')
-    // friendsMail.innerHTML = getFriendsEmail()
+    // // let friendsMail = document.getElementById('friends-mail')
+    // let mail = getFriendsEmail()
+    // console.log(mail);
+    // // friendsMail.innerHTML = mail
 
     // async function getFriendsEmail(){
-    //     var email
-    //     let id = model.activeConversationID
-    //     await firebase.firestore().collection('conversations').doc(id).onSnapShot(doc => {
-    //         console.log(doc.data());
-    //     }).catch(error=>{
+    //     var email = "Hello"
+    //     let id = model.activeConversation.id
+    //     await firebase.firestore().collection('conversations').doc(id).get().then(doc => {
+    //         users = (doc.data().users);
+    //         users.forEach(u => {
+    //             if(u != firebase.auth().currentUser.email){
+    //                 console.log(u);
+    //                 return u
+    //             }
+
+    //         });
+    //     }).catch(error =>{
     //         console.log(error);
     //     })
-    //     return 'Name'
-    // }
+    //     return email;
 
+    // }
+    
     let chatMessage = document.getElementById('chat-messages')
     if(chatMessage){
         chatMessage.innerHTML = ""
-        if(conversation.messages != null){        
-            for(let message of conversation.messages){
-                let className = "chat-message"
-                if (message.owner == model.authUser.email){
-                    className += " your"
-                }
-                let html = `
-                    <div class = "${className}">
-                        <span> ${message.content} </span>
-                    </div>
-                `
-                // let str = "user"
-                // let mess = "hello ${str} "  ~ "hello user" 
-                chatMessage.innerHTML += html
+        if(conversation.messages != null)
+        for(let message of conversation.messages){
+            let className = "chat-message"
+            if (message.owner == model.authUser.email){
+                className += " your"
             }
-            // auto scroll xuong duoi 
-            chatMessage.scrollTop = chatMessage.scrollHeight - chatMessage.clientHeight;
+            let html = `
+                <div class = "${className}">
+                    <span> ${message.content} </span>
+                </div>
+            `
+            // let str = "user"
+            // let mess = "hello ${str} "  ~ "hello user" 
+            chatMessage.innerHTML += html
         }
+        // auto scroll xuong duoi 
+        chatMessage.scrollTop = chatMessage.scrollHeight - chatMessage.clientHeight;
     }
 }
 

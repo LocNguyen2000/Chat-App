@@ -144,6 +144,16 @@ components.chat = `
     </section>
 `
 
+components.footer = `
+    <div id = 'footer' class = 'footer'>
+        <ul>
+            <li><a href = "https://locnguyen2000.github.io/Portfolio/"> ABOUT </a></li>
+            <li>FEEDBACK</li>
+        </ul>
+    </div>
+
+`
+
 components.navBar = 
 `
     <nav class = "main-nav-bar">

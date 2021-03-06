@@ -276,4 +276,25 @@ button:focus{
     border-radius: 4px;
     width: 100%;
     margin: 5px;
+    box-shadow: 0 0 1px #333;
 }
+
+/* footer */
+.footer{
+    width: 100%;
+    height: auto;
+    padding: 30px;
+    background:#3A4046;
+    color:white;
+
+}
+.footer ul{
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+.footer ul li a{
+    color: white;
+}
+
