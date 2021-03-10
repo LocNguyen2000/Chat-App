@@ -86,6 +86,9 @@ components.login = `
 </section>
 `
 
+
+
+
 // 1 the co nhieu class duoc, phan cach nhau boi 1 dau cach 
 // <span> khac vs <p>
 // placeholder : neu ko viet gi,hien len message
@@ -153,6 +156,7 @@ components.footer = `
     </div>
 
 `
+
 
 components.navBar = 
 `

@@ -218,15 +218,15 @@ view.setText = function(id , text) {
 }
 
 view.showConversation = function(conversation){
-    // // let friendsMail = document.getElementById('friends-mail')
+    // let friendsMail = document.getElementById('friends-mail')
     // let mail = getFriendsEmail()
-    // console.log(mail);
-    // // friendsMail.innerHTML = mail
+    // // console.log(mail);
+    // friendsMail.innerHTML = mail
 
-    // async function getFriendsEmail(){
+    // function getFriendsEmail(){
     //     var email = "Hello"
     //     let id = model.activeConversation.id
-    //     await firebase.firestore().collection('conversations').doc(id).get().then(doc => {
+    //     firebase.firestore().collection('conversations').doc(id).get().then(doc => {
     //         users = (doc.data().users);
     //         users.forEach(u => {
     //             if(u != firebase.auth().currentUser.email){
